@@ -10,8 +10,8 @@ Project details:
 Primary Language: Python
 
 Dataset: 
- Fer 2013: https://www.kaggle.com/msambare/fer2013 
- Affect net: https://www.kaggle.com/mouadriali/affectnetsample 
+- Fer 2013: https://www.kaggle.com/msambare/fer2013 
+- Affect net: https://www.kaggle.com/mouadriali/affectnetsample 
 
 Deployment: Web based / Website
 - Backend 

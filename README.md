@@ -15,14 +15,14 @@ Dataset:
 
 Deployment: Web based / Website
 - Backend 
- - Database (.csv or Sqlite3) (stage 1 and stage 2)
- - Python and library numpy pandas sklearn extensively used (stage 1 and stage 3)
- - Deep Learning model (Tensorflow Keras hyperparameter finetuned model) (stage 7)
- - Model deployment using flask/Django on website (stage 8)
+ - Database (.csv or Sqlite3) 
+ - Python and library numpy pandas sklearn extensively used 
+ - Deep Learning model (Tensorflow Keras hyperparameter finetuned model)
+ - Model deployment using flask on website
 
 - Frontend
- - HTML CSS and Bootstrap (Stage 4)
- - JavaScript (stage 5)
+ - HTML CSS and Bootstrap
+ - JavaScript
 
 -	Libraries in use:
   o	Numpy

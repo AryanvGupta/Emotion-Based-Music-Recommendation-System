@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static',filename='styles/signup.css') }}" >
+</head>
+<body>
+	<div class="container" id="container">
+		<div class="form-container sign-up-container">
+
+			<form method="POST" action="/signed">
+				<h1>Sign up</h1>
+
+        		<img id="1"  src="static/images/person.png" />
+
+        		<input name="name" type="text" placeholder="Full Name" />
+				<input name="email" type="email" placeholder="Email" />
+				<input name="password" type="password" placeholder="Password" />
+				<input name="confirm-password" type="password" placeholder="Confirm Password" />
+				
+				<button>sign up</button>
+				
+        
+			</form>
+		</div>
+             
+				</div>
+			</div>
+		</div>
+</body>
+</html>

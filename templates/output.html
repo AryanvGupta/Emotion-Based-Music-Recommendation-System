@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<head>
+	
+	<link rel="stylesheet" type="text/css"  href="{{ url_for('static',filename='styles/main2.css') }}" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <div class="relative">
+      <p>
+         <form method="POST" action="/output?gg=1&eid=1&sid=0">
+				<button id="happy">Happy</button>
+			</form>
+
+			<form method="POST" action="/output?gg=1&eid=3&sid=0">
+				<button id="sad">Sad</button>
+			</form>
+
+			<form method="POST" action="/output?gg=1&eid=0&sid=0">
+				<button id="angry">Angry</button>
+			</form>
+
+			<form method="POST" action="/output?gg=1&eid=2&sid=0">
+				<button id="neutral">Neutral</button>
+			</form>
+
+			<form method="POST" action="/output?gg=1&eid=4&sid=0">
+				<button id="surprise">Surprise</button>
+			</form>
+      </p>
+    </div>
+
+	<div class="musicdiv">
+		<img id="gif" src="static/images/musicicon.gif">
+		<input id="sname" type="text" placeholder={{songname}} disabled="disabled">
+		<input id="mname" type="text" placeholder="{{mood}}" disabled="disabled">
+	
+	</div>
+
+	<audio id="nyan" src="{{song}}" preload="metadata" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <a class="btn" id="nyan-btn">Play</a>
+    <div class="btn1"></div>
+	
+   <img id="rectu"  src="static/images/rectu.png">
+   <div class="songpanel">
+
+      <p>
+         <form method="POST" action="/output?gg=1&eid={{eid}}&sid=0">
+            <h3>{{song1}}</h3>
+            <button id="song1" class="songbtn">Play</button>
+         </form>
+
+         <form method="POST" action="/output?gg=1&eid={{eid}}&sid=1">
+            <h3>{{song2}}</h3>
+            <button id="song2" class="songbtn">Play</button>
+         </form>
+
+         <form method="POST" action="/output?gg=1&eid={{eid}}&sid=2">
+            <h3>{{song3}}</h3>
+            <button id="song3" class="songbtn">Play</button>
+         </form>
+
+         <form method="POST" action="/output?gg=1&eid={{eid}}&sid=3">
+            <h3>{{song4}}</h3>
+            <button id="song4" class="songbtn">Play</button>
+         </form>
+
+         <form method="POST" action="/output?gg=1&eid={{eid}}&sid=4">
+            <h3>{{song5}}</h3>
+            <button id="song5" class="songbtn">Play</button>
+         </form>
+      </p>
+
+      <form method="POST" action="{{link}}">
+         <button class="playlist">More Songs...</button>
+      </form>
+      
+
+    </div>
+
+	<script>
+            var nyan = document.getElementById('nyan');
+            var nyanBtn = document.getElementById('nyan-btn');
+
+            function playPause(song){
+               if (song.paused && song.currentTime >= 0 && !song.ended) {
+                  song.play();
+                  nyanBtn.text = "Stop"
+               } else {
+                  song.pause();
+                  nyanBtn.text = "Play"
+               }
+            }
+
+            function reset(btn, song){
+               if(btn.classList.contains('playing')){
+                  btn.classList.toggle('playing');
+               }
+               song.pause();
+               song.currentTime = 0;
+            }
+
+            function progress(btn, song){
+               setTimeout(function(){
+                  var end = song.duration; 
+                  var current = song.currentTime;
+                  var percent = current/(end/100);
+                  //check if song is at the end
+                  if(current==end){
+                     reset(btn, song);
+                  }
+                  //set inset box shadow
+                  btn.style.boxShadow = "inset " + btn.offsetWidth * (percent/100) + "px 0px 0px 0px rgba(0,0,0,0.125)"
+                  //call function again
+                  progress(btn, song);     
+               }, 1000);
+            }
+
+            nyanBtn.addEventListener('click', function(){
+               nyanBtn.classList.toggle('playing');
+               playPause(nyan);
+               progress(nyanBtn, nyan);
+            });
+
+        </script>
+
+</body>
+
+
+<!-- SAD : https://www.youtube.com/playlist?list=PLgzTt0k8mXzHcKebL8d0uYHfawiARhQja -->
+<!-- HAPPY : https://www.youtube.com/playlist?list=PL1VuYyZcPYIJTP3W_x0jq9olXviPQlOe1 -->
+<!-- NETURAL : https://www.youtube.com/playlist?list=PLfQAe5M2BkwCKimscRq-F9wkO5tUPY9TS -->
+<!-- SURPRISE : https://www.youtube.com/playlist?list=PLLd27tZalu3zRpolGDrklbbS1T-L5Lc7g -->
+<!-- ANGRY : https://www.youtube.com/playlist?list=PL_MH8gOS_ETiNT1NF8B46JYHZe6fXWfVW -->
+
+
+</html>
+
+

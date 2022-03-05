@@ -1,0 +1,359 @@
+body {
+    font-family: poppins;
+     background: url("/static/images/d.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+}
+
+
+#happy{
+    font-family: poppins;
+    position: absolute;
+    display: inline-block;
+    top: 13%;
+    left: 10%;  
+     height: 40px; 
+     width: 120px; 
+     font-size: 16px;
+     text-transform: uppercase;
+     margin-left: 50px;
+     text-align: center;
+     border-width: 3px;
+     border-color: rgba(0, 0, 1, 0.548);
+     border-radius: 10px;
+     background-color: #eed202 ;
+     color: rgb(0, 0, 0);
+     cursor: pointer;
+     font-weight: normal;
+
+}
+
+#happy:hover {background-color:rgb(27, 194, 216)}
+
+#happy:active {
+  background-color: rgb(27, 194, 216);
+  box-shadow: 0 5px rgb(116, 124, 124);
+  transform: translateY(4px);
+}
+#sad{
+    font-family: poppins;
+    position: absolute;
+    top: 13%;
+    left:20% ;
+    height: 40px; 
+    width: 120px; 
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-left: 50px;
+    border-width: 3px;
+    border-color: rgba(0, 0, 1, 0.548);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 10px;
+    background-color: #eed202 ;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-weight: normal;
+
+}
+#sad:hover {background-color:rgb(27, 194, 216)}
+
+#sad:active {
+  background-color: rgb(27, 194, 216);
+  box-shadow: 0 5px rgb(116, 124, 124);
+  transform: translateY(4px);
+}
+
+#angry{
+    font-family: poppins;
+
+    position: absolute;
+    top: 13%;
+    left:30% ;
+    height: 40px; 
+    width: 120px; 
+    font-size: 16px;
+     text-transform: uppercase;
+     margin-left: 50px;
+
+     text-align: center;
+     border-width: 3px;
+     border-color: rgba(0, 0, 1, 0.548);
+     border-radius: 10px;
+     box-shadow: 10px;
+     background-color:#eed202 ;
+     color: rgb(0, 0, 0);
+     cursor: pointer;
+     font-weight: normal;
+
+}
+#angry:hover {background-color:rgb(27, 194, 216)}
+
+#angry:active {
+  background-color: rgb(27, 194, 216);
+  box-shadow: 0 5px rgb(116, 124, 124);
+  transform: translateY(4px);
+}
+
+#neutral{
+    font-family: poppins;
+    position: absolute;
+    top: 13%;
+    left:40% ;
+    height: 40px; 
+    width: 120px; 
+    font-size: 16px;
+     text-transform: uppercase;
+     margin-left: 50px;
+     text-align: center;
+     border-radius: 10px;
+     box-shadow: 10px;
+     border-width: 3px;
+     border-color: rgba(0, 0, 1, 0.548);
+     background-color:  #eed202 ;
+     color: rgb(0, 0, 0);
+     cursor: pointer;
+     font-weight: normal;
+
+}
+#neutral:hover{background-color:rgb(27, 194, 216);}
+
+#neutral:active {
+  background-color: rgb(27, 194, 216);
+  box-shadow: 0 5px rgb(116, 124, 124);
+  transform: translateY(4px);
+}
+
+#surprise{
+    font-family: poppins;
+
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    height: 40px; 
+     width: 120px; 
+     font-size: 16px;
+     text-transform: uppercase;
+     margin-left: 50px;
+     text-align: center;
+     border-radius: 10px;
+     box-shadow: 10px;
+     border-width: 3px;
+     border-color: rgba(0, 0, 1, 0.548);
+     background-color:  #eed202 ;
+     color: rgb(0, 0, 0);
+     cursor: pointer;
+     font-weight: normal;
+
+}
+#surprise:hover {background-color:rgb(27, 194, 216)}
+
+#surprise:active {
+  background-color: rgb(27, 194, 216);
+  box-shadow: 0 5px rgb(116, 124, 124);
+  transform: translateY(4px);
+}
+
+
+#gif{
+    height: 270px;
+    width: 270px;
+    border-radius: 20px;
+    position: absolute;
+    opacity: 90%;
+    top: 30%;
+    left: 27%;
+}
+
+
+
+#sname{
+    position: absolute;
+    font-family: poppin;
+    font-size: 18px;
+    top: 68%;
+    left: 28.5%;
+    max-width: 270px;
+    text-transform: capitalize;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+
+}
+#mname{
+    position: absolute;
+    font-family: poppin;
+    font-size: 18px;
+    top: 72%;
+    left: 28.5%;
+    max-width: 270px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    text-transform: capitalize;
+}
+
+::placeholder {
+  color: black;
+  opacity: 1; /* Firefox */
+  text-align: center;
+}
+
+.musicdiv{
+    height:100px ;
+    width:50% ;
+    left: 40%;
+    top: 50%;
+}
+
+    
+.sbreak{
+    position: absolute;
+    width: 1550px;
+    height: 88px;
+    left: 187px;
+    top: 1003px;
+
+    align-content: center;
+    /*background: red;*/
+
+    border-radius: 30px;
+    background: #8DF1FD;
+}
+
+#volume{
+    position: absolute;
+    left: 841px;
+    top: 1010px;
+    height: 30px;
+    width: 30px;
+
+    border: none;
+    outline: none;
+
+    background: #93FD82;
+}
+
+
+.btn{
+    position: absolute;
+    width:270px;
+    height: 46px;
+    left: 27%;
+    top: 77%;
+
+
+    cursor:pointer;
+    display:inline-block;
+    padding:0px;
+    
+
+    font-family: Poppins;
+    color: white;
+    /*text-transform:uppercase;*/
+    text-align: center;
+    font-size: 24px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+
+
+    border-radius: 4px;
+    border: 2px solid gray;
+    background: #ff4b2be3;
+    z-index: 1;
+    border-radius: 10px;
+    line-height:45px;
+
+    @include transition(box-shadow .25s ease);
+    &:after{
+        content:'';
+        display:inline-block;
+        color: rgba(193, 255, 183, 0.76);
+        background:#fff;
+        font-family: Poppins;
+        border-color: black;
+        padding:3px;
+        border-radius: 50%;
+        text-align: center;
+        vertical-align: bottom;
+        /*height:20px;
+        width:20px;*/
+        margin-left:8px;
+        padding-left: 4.5px;
+        padding-right:1.5px;
+
+        
+        
+   }
+   
+   &.playing{
+        &:after{
+            padding:3px;
+            content:'';
+            text-align: center;
+            vertical-align: bottom;
+      }
+   }
+}
+.btn:active {
+    background-color: #eed202;
+    color: black;
+    box-shadow: 0 5px rgb(116, 124, 124);
+    transform: translateY(4px);
+             
+            
+       }
+.btn1{
+    z-index: 0;
+}
+
+
+#rectu{
+    position: absolute;
+    left:68% ;
+    top: 12%;
+    width: 350px;
+    height: 570px;
+    border-radius: 15px;
+
+}
+
+.songpanel{
+    position: absolute;
+    left:71% ;
+    top: 13%;
+}
+
+.songbtn{
+    font-family: poppins;
+     width: 100px; 
+     font-size: 13px;
+     text-transform: uppercase;
+     height: 30px; 
+     text-align: center;
+     margin-top: -5px;
+     border-radius: 10px;
+     box-shadow: 10px;
+     background-image: linear-gradient(to right, rgb(27, 194, 216) , rgb(23, 198, 221));
+     color: black;
+     cursor: pointer;
+     font-weight: bold;
+     border: none;
+}
+
+.playlist{
+    position: absolute;
+
+    color: grey;
+    border: none;
+
+    top: 103%;
+
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: bold;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/login.css') }}">
+	<title>Login Page</title>
+</head>
+<body>
+	<div class="container" id="container">
+		<div class="form-container log-in-container">
+
+			<form  method="POST" action="/input">
+				<h1>Login</h1>
+
+				<div class="person" id="person">
+        			<img id="1" src="static/images/person.png"/>
+        		</div>
+
+				<input id="email" name="email" type="email" placeholder="Email" />
+				<input id="password" name="password" type="password" placeholder="Password" />
+				
+				<button class="button" >Log In</button>
+				<a href="{{ url_for('signup')}}">Create a new account</a>
+        
+			</form>
+
+			<form  method="POST" action="/forgetPassword?gg=0">
+					<button class="forget" >Forgot your password?</button>
+			</form>
+
+			<h3 id="message">{{message}}</h3>
+		</div>
+             
+				</div>
+			</div>
+		</div>
+</body>
+</html>

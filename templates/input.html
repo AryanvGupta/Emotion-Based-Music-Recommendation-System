@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static',filename='styles/main.css') }}"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+
+  <script src="../scripts/index.js"></script>
+
+<body>
+
+  
+  <div class="center">
+   <video id="camera" style="transform: rotateY(180deg);" class="" autoplay></video> 
+  </div>
+
+  <h3>{{message}}</h3>
+
+    
+
+  <form action="/loading">
+    <button id="gets1" class="gets">Get your music </button>
+  </form>
+
+  <form action="/output?gg=2&eid=1&sid=0" method="POST">
+    <div class="upload">
+      <label for="image">
+        <input type="file" name="image" id="image" style="display:none;" accept=".png, .jpg, .jpeg" />
+          <img src="static/images/upload.svg" id="image" alt="Try Again..!" >
+      </label>
+      <button id="gets2" class="gets">Get</button>
+    </div>
+  </form>
+
+ <div class="relative">
+        <p>
+            <form method="POST" action="/output?gg=1&eid=1&sid=0">
+        <button id="happy">Happy</button>
+      </form>
+
+      <form method="POST" action="/output?gg=1&eid=3&sid=0">
+        <button id="sad">Sad</button>
+      </form>
+
+      <form method="POST" action="/output?gg=1&eid=0&sid=0">
+        <button id="angry">Angry</button>
+      </form>
+
+      <form method="POST" action="/output?gg=1&eid=2&sid=0">
+        <button id="neutral">Neutral</button>
+      </form>
+
+      <form method="POST" action="/output?gg=1&eid=4&sid=0">
+        <button id="surprise">Surprise</button>
+      </form>
+    </div>
+
+   
+
+ <script>
+  var start = function () {
+      var video = document.getElementById('camera'),
+          vendorUrl = window.URL || window.webkitURL;
+      if (navigator.mediaDevices.getUserMedia) {
+          navigator.mediaDevices.getUserMedia({ video: true })
+              .then(function (stream) {
+                  video.srcObject = stream;
+              }).catch(function (error) {
+                  console.log("Something went wrong!");
+              });
+      }
+  }
+  start();
+</script>
+
+<script src="../scripts/navbar_loader.js"></script>
+</body>
+
+
+
+</head>
+</html>
+
+
+
